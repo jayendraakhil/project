@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-commerce Website</title>
+    <style>
+        /* Basic styling for your website */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+
+
+        .product {
+            width: calc(33.33% - 20px);
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>My E-commerce</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Login/Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="products">
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h2>Product 1</h2>
+                <p>Price: $100</p>
+                <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h2>Product 2</h2>
+                <p>Price: $100</p>
+                <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h2>Product 3</h2>
+                <p>Price: $100</p>
+                <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h2>Product 4</h2>
+                <p>Price: $100</p>
+                <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h2>Product 5</h2>
+                <p>Price: $10</p>
+                <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h2>Product 6</h2>
+                <p>Price: $100</p>
+                <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h2>Produc 7</h2>
+                <p>Price: $100</p>
+                <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h2>Product 8</h2>
+                <p>Price: $100</p>
+                <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h2>Product 9</h2>
+                <p>Price: $100</p>
+                <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </section>
+        <!-- Repeat the product section for each product -->
+    </main>
+    <footer>
+        <p>&copy; 2023 My E-commerce</p>
+    </footer>
+    <script>
+        // JavaScript for your website (e.g., handling user interactions)
+        // You can add more functionality as needed.
+
+        // Example: Handle a click event
+        document.querySelector('.product').addEventListener('click', function () {
+            alert('Product clicked!');
+        });
+
+    </script>
+</body>
+
+</html>

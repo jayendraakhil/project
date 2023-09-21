@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-info {
+            display: flex;
+            margin: 20px 0;
+        }
+
+        .product-image {
+            flex: 1;
+            margin-right: 20px;
+            text-align: center;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-details {
+            flex: 2;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .price {
+            font-size: 20px;
+            color: #e47911;
+            margin-top: 10px;
+        }
+
+        .availability {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .quantity {
+            margin-top: 10px;
+        }
+
+        .quantity select {
+            padding: 5px;
+        }
+
+        .buttons {
+            margin-top: 10px;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            background-color: #f0c14b;
+            border: none;
+            color: #111;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: #ddb347;
+        }
+
+        .product-description {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .product-reviews {
+            margin-top: 20px;
+        }
+
+        .similar-products {
+            margin-top: 20px;
+        }
+
+        .similar-product {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .similar-product-image {
+            flex: 1;
+            margin-right: 20px;
+            text-align: center;
+        }
+
+        .similar-product-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .similar-product-details {
+            flex: 2;
+        }
+
+        .similar-product-title {
+            font-size: 18px;
+            margin-top: 0;
+        }
+
+        .similar-product-price {
+            font-size: 16px;
+            color: #e47911;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Product Name</h1>
+
+        <img src="/static/bed.jpg" alt="Product Image" width="200">
+
+        <p><strong>Product Description:</strong></p>
+        <p>Very comfortable to use</p>
+
+        <p><strong>Price:</strong>Rs:1000</p>
+        <p><strong>In Stock:</strong> XX units</p>
+
+        <label for="quantity">Quantity:</label>
+        <select id="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+
+            <!-- Add more quantity options as needed -->
+
+        </select>
+        <button id="plusButton">+</button>
+        <button id="minusButton">-</button>
+
+        <button>Add to Cart</button>
+
+        <h2>Product Details</h2>
+        <ul>
+            <li><strong>Brand:</strong> Dukp</li>
+            <li><strong>Category:</strong> Bed</li>
+            <li><strong>Manufacturer:</strong> manade idanta</li>
+            <li><strong>Model Number:</strong> 111111</li>
+            <li><strong>Shipping Weight:</strong> 10kgs</li>
+            <li><strong>Product Dimensions:</strong> 10 12</li>
+        </ul>
+
+        <h2>Product Reviews</h2>
+        <p><strong>Average Rating:</strong> XX.XX</p>
+
+        <h3>Customer Reviews:</h3>
+        <p><strong>Ajay</strong></p>
+        <p><strong>Rating:</strong> XX/5</p>
+        <p>Review: nice.</p>
+
+        <p><strong>Nikhil</strong></p>
+        <p><strong>Rating:</strong> XXXX/5</p>
+        <p>Review: Good.</p>
+
+        <!-- Add more reviews as needed -->
+
+        <button>Add a Review</button>
+
+        <h2>Similar Products</h2>
+        <p><strong>1. [Similar Product 1 Name]</strong></p>
+        <img src="/static/couch.jpg" alt="Similar Product 1" width="100">
+        <p><strong>Price:</strong> Rs:100</p>
+
+        <p><strong>2. [Similar Product 2 Name]</strong></p>
+        <img src="/static/dt.jpg" alt="Similar Product 2" width="100">
+        <p><strong>Price:</strong> Rs:12</p>
+        <!-- Add more similar products as needed -->
+    </center>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const quantitySelect = document.getElementById("quantity");
+            const plusButton = document.getElementById("plusButton");
+            const minusButton = document.getElementById("minusButton");
+
+            plusButton.addEventListener("click", function () {
+                // Increment the selected quantity
+                const currentValue = parseInt(quantitySelect.value);
+                quantitySelect.value = (currentValue + 1).toString();
+            });
+
+            minusButton.addEventListener("click", function () {
+                // Decrement the selected quantity, but not below 1
+                const currentValue = parseInt(quantitySelect.value);
+                if (currentValue > 1) {
+                    quantitySelect.value = (currentValue - 1).toString();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

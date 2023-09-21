@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E commerce</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+
+<body>
+
+
+    <section id="header">
+        <a href="#"><img src="" class="logo1" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="/index4">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/sign_up">Sign Up</a></li>
+                <li><a href="/login_form">Login</a></li>
+                <li><a href="/"><i class=""></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="/static/fur2.jpg" style="width:100%">
+            <div class="slide-text">
+                <h4>Info</h4>
+                <h2>Good deals</h2>
+                <h1>on every product</h1>
+                <p>save money with offers on each product</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="/static/dt.jpg" style="width:100%">
+                <div class="slide-text">
+                    <h4>Info</h4>
+                    <h2>Good deals</h2>
+                    <h1>on every product</h1>
+                    <p>save money with offers on each product</p>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="/static/couch.jpg" style="width:100%">
+                    <div class="slide-text">
+                        <h4>Info</h4>
+                        <h2>Good deals</h2>
+                        <h1>on every product</h1>
+                        <p>save money with offers on each product</p>
+                        <button>Shop Now</button>
+                    </div>
+                </div>
+
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="/static/fur1.jpg" style="width:100%">
+                        <div class="slide-text">
+                            <h4>Info</h4>
+                            <h2>Good deals</h2>
+                            <h1>on every product</h1>
+                            <p>save money with offers on each product</p>
+                            <button>Shop Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Repeat this structure for the other slides -->
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+
+                <section id="product" class="section-p1">
+                    <h2>Explore More </h2>
+                    <ul>
+                        <li>
+                            <a href="/bed">
+                                <img src="/static/bed.jpg" alt="bed">
+                                Bed
+                            </a>
+                            <p>Click Here to see about Books</p>
+                        </li>
+                        <li>
+                            <a href="/couch">
+                                <img src="/static/couch.jpg" alt="couch">
+                                Couch
+                            </a>
+                            <p>Click Here to see about Pen</p>
+                        </li>
+                        <li>
+                            <a href="/cupb">
+                                <img src="/static/cup.jpg" alt="cup">
+                                Cupboard
+                            </a>
+                            <p>Click Here to see about Art</p>
+                        </li>
+                        <li>
+                            <a href="/dt">
+                                <img src="/static/dt1.jpg" alt="dt">
+                                Dining Table
+                            </a>
+                            <p>Click Here to see about chocklate</p>
+                        </li>
+                        <li>
+                            <a href="/reclainer">
+                                <img src="/static/rec.jpg" alt="rec">
+                                Reclainer
+                            </a>
+                            <p>Click Here to see about paintings</p>
+                        </li>
+                        <li>
+                            <a href="/studytb">
+                                <img src="/static/sdt.jpg" alt="Study table">
+                                Study Table
+                            </a>
+                            <p>Click Here to see about design</p>
+                        </li>
+                        <li>
+
+                            <a href="/sofa">
+                                <img src="/static/sofa.jpg" alt="Sofa">
+                                Sofa
+                            </a>
+                            <p>Click Here to see about Striker</p>
+                        </li>
+
+                    </ul>
+
+                </section>
+                <script>
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides");
+                        let dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) { slideIndex = 1; }
+                        if (n < 1) { slideIndex = slides.length; }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex - 1].style.display = "block";
+                        dots[slideIndex - 1].className += " active";
+                    }
+                </script>
+
+</body>
+
+</html>
